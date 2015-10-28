@@ -1,0 +1,27 @@
+<table border='1'>
+	<thead>
+		<tr>
+			<th>Username</th>
+			<th>First name</th>
+			<th>Last name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat='user in users'>
+			<td>{{user.username}}</td>
+			<td>{{user.firstName}}</td>
+			<td>{{user.lastName}}</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<form ng-submit='createUser(form)'>
+	<label>Username</label>
+	<input type='text' ng-model='form.username'/>
+	<label>First name</label>
+	<input type='text' ng-model='form.firstName'/>
+	<label>Last name</label>
+	<input type='text' ng-model='form.lastName'/>
+	<input type='submit' value='Criar'/>
+</form>

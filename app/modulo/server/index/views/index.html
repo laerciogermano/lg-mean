@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<meta charset='utf-8' />
+	<!-- <link rel="stylesheet" type="text/css" href="/admin/build/aggregated.min.css" /> -->
+	{% for cssFile in css %}
+		<link rel="stylesheet" href="{{cssFile}}">
+	{% endfor %}
+
+	<script type="text/javascript" src='/socket.io/socket.io.js'></script>
+
+</head>
+<body>
+	<section data-ui-view></section>
+	<script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+ 	<script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+ 	<script type="text/javascript" src="/bower_components/angular-resource/angular-resource.min.js"></script>
+ 	<!--<script type="text/javascript" src="/admin/build/aggregated.min.js"></script>-->
+ 	{% for jsFile in js %}
+		<script type="text/javascript" src='{{jsFile}}'></script>
+	{% endfor %}
+</body>
+</html>
